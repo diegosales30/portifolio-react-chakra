@@ -67,6 +67,7 @@ const Landing = () => {
                 bg: "green.500",
               }}
               onClick={() => handleNavigation("/home")}
+              color={"white"}
             >
               Saiba mais
             </Button>
