@@ -1,7 +1,7 @@
 import {
   Box,
-  chakra,
   Container,
+  Link,
   Stack,
   Text,
   useColorModeValue,
@@ -12,7 +12,7 @@ import { SiGmail } from "react-icons/si";
 
 const SocialButton = ({ children, label, href }) => {
   return (
-    <chakra.button
+    <Link
       bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
       rounded={"full"}
       w={8}
@@ -27,10 +27,11 @@ const SocialButton = ({ children, label, href }) => {
       _hover={{
         bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
       }}
+      target={"_blank"}
     >
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}
-    </chakra.button>
+    </Link>
   );
 };
 
@@ -51,13 +52,22 @@ export default function SmallWithSocial() {
       >
         <Text fontSize={"0.8rem"}>© 2022 Desenvolvido por Diego Sales.</Text>
         <Stack direction={"row"} spacing={6}>
-          <SocialButton label={"Twitter"} href={"#"}>
+          <SocialButton
+            label={"GitHub"}
+            href={"https://github.com/diegosales30"}
+          >
             <FaGithub />
           </SocialButton>
-          <SocialButton label={"YouTube"} href={"#"}>
+          <SocialButton
+            label={"Linkedin"}
+            href={"https://www.linkedin.com/in/diego-felipe-js/"}
+          >
             <FaLinkedinIn />
           </SocialButton>
-          <SocialButton label={"Instagram"} href={"#"}>
+          <SocialButton
+            label={"Gmail"}
+            href={"mailto:diegosalesdasilva23@gmail.com"}
+          >
             <SiGmail />
           </SocialButton>
         </Stack>

@@ -168,7 +168,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
 
 const MobileNav = () => {
   return (
-    <Flex position={"absolute"} top={38}>
+    <Flex position={"absolute"} top={49}>
       <Stack
         bg={useColorModeValue("white", "gray.800")}
         p={4}
