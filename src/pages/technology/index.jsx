@@ -1,15 +1,14 @@
-import WithSpeechBubbles from "../../components/about";
 import SmallWithSocial from "../../components/footer";
 import Header from "../../components/header";
 
-const Home = () => {
+const Technology = () => {
   return (
     <>
       <Header />
-      <WithSpeechBubbles />
+
       <SmallWithSocial />
     </>
   );
 };
 
-export default Home;
+export default Technology;

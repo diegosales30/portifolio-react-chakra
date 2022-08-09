@@ -1,29 +1,27 @@
 import {
   Box,
   Flex,
-  Text,
   IconButton,
   Stack,
   Collapse,
-  Icon,
-  Link,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
   useColorModeValue,
   useDisclosure,
+  ListItem,
+  UnorderedList,
 } from "@chakra-ui/react";
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-} from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import ColorModeToggle from "../nightMode";
 import { SiHomebridge } from "react-icons/si";
+import { useNavigate } from "react-router-dom";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    return navigate(path);
+  };
 
   return (
     <Box>
@@ -57,9 +55,49 @@ export default function WithSubnavigation() {
           justify={{ base: "center", md: "start" }}
           color={"green.400"}
         >
-          <SiHomebridge size={30} cursor={"pointer"} />
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
-            <DesktopNav />
+          <SiHomebridge
+            size={30}
+            cursor={"pointer"}
+            onClick={() => handleNavigation("/home")}
+          />
+          <Flex>
+            <UnorderedList
+              display={{ base: "none", md: "flex" }}
+              ml={10}
+              listStyleType={"none"}
+            >
+              <ListItem
+                onClick={() => handleNavigation("/home")}
+                cursor={"pointer"}
+                _hover={{ color: "green.600" }}
+              >
+                Home
+              </ListItem>
+              <ListItem
+                onClick={() => handleNavigation("/tecnologias")}
+                cursor={"pointer"}
+                marginLeft={"10px"}
+                _hover={{ color: "green.600" }}
+              >
+                Tecnologias
+              </ListItem>
+              <ListItem
+                onClick={() => handleNavigation("/projetos")}
+                cursor={"pointer"}
+                marginLeft={"10px"}
+                _hover={{ color: "green.600" }}
+              >
+                Projetos
+              </ListItem>
+              <ListItem
+                onClick={() => handleNavigation("/contato")}
+                cursor={"pointer"}
+                marginLeft={"10px"}
+                _hover={{ color: "green.600" }}
+              >
+                Contato
+              </ListItem>
+            </UnorderedList>
           </Flex>
         </Flex>
 
@@ -74,183 +112,49 @@ export default function WithSubnavigation() {
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
+        <Flex>
+          <UnorderedList
+            position={"absolute"}
+            padding={0}
+            margin={0}
+            top={55}
+            left={-5}
+            bg={useColorModeValue("white", "gray.800")}
+            p={10}
+            display={{ md: "none" }}
+            listStyleType={"none"}
+          >
+            <ListItem
+              onClick={() => handleNavigation("/home")}
+              marginTop={"0px"}
+              cursor={"pointer"}
+            >
+              Home
+            </ListItem>
+            <ListItem
+              onClick={() => handleNavigation("/tecnologias")}
+              marginTop={"10px"}
+              cursor={"pointer"}
+            >
+              Tecnologias
+            </ListItem>
+            <ListItem
+              onClick={() => handleNavigation("/projetos")}
+              marginTop={"10px"}
+              cursor={"pointer"}
+            >
+              Projetos
+            </ListItem>
+            <ListItem
+              onClick={() => handleNavigation("/contato")}
+              marginTop={"10px"}
+              cursor={"pointer"}
+            >
+              Contato
+            </ListItem>
+          </UnorderedList>
+        </Flex>
       </Collapse>
     </Box>
   );
 }
-
-const DesktopNav = () => {
-  const linkColor = useColorModeValue("gray.600", "gray.200");
-  const linkHoverColor = useColorModeValue("gray.800", "white");
-  const popoverContentBgColor = useColorModeValue("white", "gray.800");
-
-  return (
-    <Stack direction={"row"} spacing={4}>
-      {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
-          <Popover trigger={"hover"} placement={"bottom-start"}>
-            <PopoverTrigger>
-              <Link
-                p={2}
-                href={navItem.href ?? "#"}
-                fontSize={"sm"}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: "none",
-                  color: linkHoverColor,
-                }}
-              >
-                {navItem.label}
-              </Link>
-            </PopoverTrigger>
-
-            {navItem.children && (
-              <PopoverContent
-                border={0}
-                boxShadow={"xl"}
-                bg={popoverContentBgColor}
-                p={4}
-                rounded={"xl"}
-                minW={"sm"}
-              >
-                <Stack>
-                  {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
-                  ))}
-                </Stack>
-              </PopoverContent>
-            )}
-          </Popover>
-        </Box>
-      ))}
-    </Stack>
-  );
-};
-
-const DesktopSubNav = ({ label, href, subLabel }) => {
-  return (
-    <Link
-      href={href}
-      role={"group"}
-      display={"block"}
-      p={2}
-      rounded={"md"}
-      _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
-    >
-      <Stack direction={"row"} align={"center"}>
-        <Box>
-          <Text
-            transition={"all .3s ease"}
-            _groupHover={{ color: "pink.400" }}
-            fontWeight={500}
-          >
-            {label}
-          </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
-        </Box>
-        <Flex
-          transition={"all .3s ease"}
-          transform={"translateX(-10px)"}
-          opacity={0}
-          _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
-          justify={"flex-end"}
-          align={"center"}
-          flex={1}
-        >
-          <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
-        </Flex>
-      </Stack>
-    </Link>
-  );
-};
-
-const MobileNav = () => {
-  return (
-    <Flex position={"absolute"} top={49}>
-      <Stack
-        bg={useColorModeValue("white", "gray.800")}
-        p={4}
-        display={{ md: "none" }}
-      >
-        {NAV_ITEMS.map((navItem) => (
-          <MobileNavItem key={navItem.label} {...navItem} />
-        ))}
-      </Stack>
-    </Flex>
-  );
-};
-
-const MobileNavItem = ({ label, children, href }) => {
-  const { isOpen, onToggle } = useDisclosure();
-
-  return (
-    <Stack spacing={4} onClick={children && onToggle}>
-      <Flex
-        py={2}
-        as={Link}
-        href={href ?? "#"}
-        justify={"space-between"}
-        align={"center"}
-        _hover={{
-          textDecoration: "none",
-        }}
-        alignItems={"center"}
-      >
-        <Text
-          fontWeight={600}
-          color={useColorModeValue("gray.600", "gray.200")}
-        >
-          {label}
-        </Text>
-        {children && (
-          <Icon
-            as={ChevronDownIcon}
-            transition={"all .25s ease-in-out"}
-            transform={isOpen ? "rotate(180deg)" : ""}
-            w={6}
-            h={6}
-          />
-        )}
-      </Flex>
-
-      <Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
-        <Stack
-          mt={2}
-          pl={4}
-          borderLeft={1}
-          borderStyle={"solid"}
-          borderColor={useColorModeValue("gray.200", "gray.700")}
-          align={"start"}
-        >
-          {children &&
-            children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
-                {child.label}
-              </Link>
-            ))}
-        </Stack>
-      </Collapse>
-    </Stack>
-  );
-};
-
-const NAV_ITEMS = [
-  {
-    label: "Home",
-    href: "#",
-  },
-  {
-    label: "Tecnologias",
-    href: "#",
-  },
-  {
-    label: "Projetos",
-    href: "#",
-  },
-  {
-    label: "Fale comigo",
-    href: "#",
-  },
-];

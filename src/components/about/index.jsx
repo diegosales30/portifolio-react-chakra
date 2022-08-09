@@ -1,3 +1,5 @@
+//import imgGif from "../../assets/prog.gif";
+
 import {
   Box,
   Flex,
@@ -62,7 +64,7 @@ const TestimonialAvatar = ({ src, name, title }) => {
       <Avatar src={src} alt={name} mb={2} />
       <Stack spacing={-1} align={"center"}>
         <Text fontWeight={600}>{name}</Text>
-        <Text fontSize={"sm"} color={useColorModeValue("gray.600", "gray.400")}>
+        <Text fontSize={"1rem"} color={useColorModeValue("green.500")}>
           {title}
         </Text>
       </Stack>
@@ -80,6 +82,10 @@ export default function WithSpeechBubbles() {
         <Stack
           direction={{ base: "column", md: "row" }}
           spacing={{ base: 10, md: 4, lg: 10 }}
+          display={"flex"}
+          // flexDirection={"column"}
+          // alignItems={"center"}
+          // justifyContent={"center"}
         >
           <Testimonial>
             <TestimonialContent>
@@ -100,6 +106,7 @@ export default function WithSpeechBubbles() {
               title={"Front-end Developer Jr"}
             />
           </Testimonial>
+          {/* <Image src={imgGif} alt="landing" w={"50%"}  /> */}
         </Stack>
       </Container>
     </Box>
