@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "../pages/home";
 import Landing from "../pages/landing";
+import Project from "../pages/project";
 import Technology from "../pages/technology";
 
 const Routers = () => {
@@ -9,6 +10,7 @@ const Routers = () => {
       <Route path="/" element={<Landing />} />
       <Route path="/home" element={<Home />} />
       <Route path="/tecnologias" element={<Technology />} />
+      <Route path="/projetos" element={<Project />} />
     </Routes>
   );
 };
