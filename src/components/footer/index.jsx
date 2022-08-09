@@ -56,19 +56,19 @@ export default function SmallWithSocial() {
             label={"GitHub"}
             href={"https://github.com/diegosales30"}
           >
-            <FaGithub />
+            <FaGithub fontSize={"1.5rem"} />
           </SocialButton>
           <SocialButton
             label={"Linkedin"}
             href={"https://www.linkedin.com/in/diego-felipe-js/"}
           >
-            <FaLinkedinIn />
+            <FaLinkedinIn fontSize={"1.5rem"} />
           </SocialButton>
           <SocialButton
             label={"Gmail"}
             href={"mailto:diegosalesdasilva23@gmail.com"}
           >
-            <SiGmail />
+            <SiGmail fontSize={"1.5em"} />
           </SocialButton>
         </Stack>
       </Container>

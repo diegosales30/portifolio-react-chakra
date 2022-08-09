@@ -53,7 +53,7 @@ export default function WithSubnavigation() {
         <Flex
           flex={{ base: 1 }}
           justify={{ base: "center", md: "start" }}
-          color={"green.400"}
+          bg={useColorModeValue("gray.100", "gray.800")}
         >
           <SiHomebridge
             size={30}
@@ -64,19 +64,21 @@ export default function WithSubnavigation() {
             <UnorderedList
               display={{ base: "none", md: "flex" }}
               ml={10}
+              alignItems={"center"}
               listStyleType={"none"}
             >
               <ListItem
                 onClick={() => handleNavigation("/home")}
                 cursor={"pointer"}
                 _hover={{ color: "green.600" }}
+                marginLeft={"10px"}
               >
                 Home
               </ListItem>
               <ListItem
                 onClick={() => handleNavigation("/tecnologias")}
                 cursor={"pointer"}
-                marginLeft={"10px"}
+                marginLeft={"20px"}
                 _hover={{ color: "green.600" }}
               >
                 Tecnologias
@@ -84,7 +86,7 @@ export default function WithSubnavigation() {
               <ListItem
                 onClick={() => handleNavigation("/projetos")}
                 cursor={"pointer"}
-                marginLeft={"10px"}
+                marginLeft={"20px"}
                 _hover={{ color: "green.600" }}
               >
                 Projetos
@@ -92,7 +94,7 @@ export default function WithSubnavigation() {
               <ListItem
                 onClick={() => handleNavigation("/contato")}
                 cursor={"pointer"}
-                marginLeft={"10px"}
+                marginLeft={"20px"}
                 _hover={{ color: "green.600" }}
               >
                 Contato
@@ -117,10 +119,10 @@ export default function WithSubnavigation() {
             position={"absolute"}
             padding={0}
             margin={0}
-            top={55}
-            left={-5}
+            top={61}
+            //left={-5}
             bg={useColorModeValue("white", "gray.800")}
-            p={10}
+            p={5}
             display={{ md: "none" }}
             listStyleType={"none"}
           >
@@ -128,6 +130,7 @@ export default function WithSubnavigation() {
               onClick={() => handleNavigation("/home")}
               marginTop={"0px"}
               cursor={"pointer"}
+              _hover={{ color: "green.600" }}
             >
               Home
             </ListItem>
@@ -135,6 +138,7 @@ export default function WithSubnavigation() {
               onClick={() => handleNavigation("/tecnologias")}
               marginTop={"10px"}
               cursor={"pointer"}
+              _hover={{ color: "green.600" }}
             >
               Tecnologias
             </ListItem>
@@ -142,6 +146,7 @@ export default function WithSubnavigation() {
               onClick={() => handleNavigation("/projetos")}
               marginTop={"10px"}
               cursor={"pointer"}
+              _hover={{ color: "green.600" }}
             >
               Projetos
             </ListItem>
@@ -149,6 +154,7 @@ export default function WithSubnavigation() {
               onClick={() => handleNavigation("/contato")}
               marginTop={"10px"}
               cursor={"pointer"}
+              _hover={{ color: "green.600" }}
             >
               Contato
             </ListItem>
