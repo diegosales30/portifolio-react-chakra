@@ -1,15 +1,15 @@
+import Contato from "../../components/contato";
 import SmallWithSocial from "../../components/footer";
 import Header from "../../components/header";
-import Projetos from "../../components/projetos";
 
-const Project = () => {
+const Contact = () => {
   return (
     <>
       <Header />
-      <Projetos />
+      <Contato />
       <SmallWithSocial />
     </>
   );
 };
 
-export default Project;
+export default Contact;

@@ -6,9 +6,11 @@ import {
   Button,
   Stack,
   useToast,
+  Image,
 } from "@chakra-ui/react";
 
 import { useNavigate } from "react-router-dom";
+import imgLanding from "../../assets/person01.png";
 
 const Landing = () => {
   const toast = useToast();
@@ -40,7 +42,7 @@ const Landing = () => {
             color={"White"}
           >
             I'm Diego Sales. <br />
-            <Text as={"span"} color={"green.400"}>
+            <Text as={"span"} color={"#e3386a"}>
               Front-end Developer Jr
             </Text>
           </Heading>
@@ -58,11 +60,11 @@ const Landing = () => {
           >
             <Button
               colorScheme={"green"}
-              bg={"green.400"}
+              bg={"#e3386a"}
               rounded={"full"}
               px={6}
               _hover={{
-                bg: "green.500",
+                bg: "#e64c7a",
               }}
               onClick={() => handleNavigation("/home")}
               color={"white"}
@@ -70,6 +72,9 @@ const Landing = () => {
               Saiba mais
             </Button>
           </Stack>
+          <Box>
+            <Image src={imgLanding} margin={"auto"} />
+          </Box>
         </Stack>
       </Container>
     </>

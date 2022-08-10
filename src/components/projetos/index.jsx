@@ -10,9 +10,9 @@ import {
 import doit from "../../assets/image/do-it.png";
 import easymovie from "../../assets/image/easymovie.png";
 import nukenzie from "../../assets/image/nukenzie.png";
-import tiao from "../../assets/image/tiao.png";
-import breve from "../../assets/image/em-breve.png";
-import { SiGit, SiGithub } from "react-icons/si";
+import tiao from "../../assets/image/tic.png";
+import breve from "../../assets/image/bv.png";
+import { SiGithub } from "react-icons/si";
 
 export default function Projetos() {
   return (
@@ -44,11 +44,13 @@ export default function Projetos() {
           >
             <Box
               w={"200px"}
+              h={"220px"}
               display={"flex"}
               flexDirection={"column"}
               alignItems={"center"}
               _hover={{
                 cursor: "pointer",
+                transform: "scale(1.1)",
               }}
             >
               <Image src={doit} alt="doit" border={"1px solid black"} />
@@ -68,11 +70,13 @@ export default function Projetos() {
             </Box>
             <Box
               w={"200px"}
+              h={"220px"}
               display={"flex"}
               flexDirection={"column"}
               alignItems={"center"}
               _hover={{
                 cursor: "pointer",
+                transform: "scale(1.1)",
               }}
             >
               <Image src={easymovie} alt="doit" border={"1px solid black"} />
@@ -94,11 +98,13 @@ export default function Projetos() {
             </Box>
             <Box
               w={"200px"}
+              h={"220px"}
               display={"flex"}
               flexDirection={"column"}
               alignItems={"center"}
               _hover={{
                 cursor: "pointer",
+                transform: "scale(1.1)",
               }}
             >
               <Image src={nukenzie} alt="doit" border={"1px solid black"} />
@@ -121,11 +127,13 @@ export default function Projetos() {
             </Box>
             <Box
               w={"200px"}
+              h={"220px"}
               display={"flex"}
               flexDirection={"column"}
               alignItems={"center"}
               _hover={{
                 cursor: "pointer",
+                transform: "scale(1.1)",
               }}
             >
               <Image src={tiao} alt="doit" border={"1px solid black"} />
@@ -148,11 +156,13 @@ export default function Projetos() {
             </Box>
             <Box
               w={"200px"}
+              h={"220px"}
               display={"flex"}
               flexDirection={"column"}
               alignItems={"center"}
               _hover={{
                 cursor: "pointer",
+                //transform: "scale(1.1)",
               }}
             >
               <Image src={breve} alt="doit" border={"1px solid black"} />
@@ -170,11 +180,13 @@ export default function Projetos() {
             </Box>
             <Box
               w={"200px"}
+              h={"220px"}
               display={"flex"}
               flexDirection={"column"}
               alignItems={"center"}
               _hover={{
                 cursor: "pointer",
+                //transform: "scale(1.1)",
               }}
             >
               <Image src={breve} alt="doit" border={"1px solid black"} />

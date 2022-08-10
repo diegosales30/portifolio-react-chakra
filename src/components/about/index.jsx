@@ -9,7 +9,9 @@ import {
   Container,
   Avatar,
   useColorModeValue,
+  Image,
 } from "@chakra-ui/react";
+import logoinicial from "../../assets/logoInicial.png";
 
 const Testimonial = ({ children }) => {
   return <Box>{children}</Box>;
@@ -20,7 +22,6 @@ const TestimonialContent = ({ children }) => {
     <Stack
       bg={useColorModeValue("white", "gray.800")}
       boxShadow={"lg"}
-      p={8}
       rounded={"xl"}
       align={"center"}
       pos={"relative"}
@@ -64,7 +65,7 @@ const TestimonialAvatar = ({ src, name, title }) => {
       <Avatar src={src} alt={name} mb={2} />
       <Stack spacing={-1} align={"center"}>
         <Text fontWeight={600}>{name}</Text>
-        <Text fontSize={"1rem"} color={useColorModeValue("green.500")}>
+        <Text fontSize={"1rem"} color={useColorModeValue("#db316d")}>
           {title}
         </Text>
       </Stack>
@@ -76,16 +77,19 @@ export default function WithSpeechBubbles() {
   return (
     <Box bg={useColorModeValue("gray.100", "gray.700")} h={"100vh"}>
       <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
-        <Stack spacing={0} align={"center"} marginTop={"60px"}>
+        <Stack
+          spacing={0}
+          align={"center"}
+          //marginTop={"60px"}
+          overflowY={"none"}
+        >
           <Heading zIndex={"1"}>Sobre mim</Heading>
         </Stack>
         <Stack
           direction={{ base: "column", md: "row" }}
           spacing={{ base: 10, md: 4, lg: 10 }}
           display={"flex"}
-          // flexDirection={"column"}
-          // alignItems={"center"}
-          // justifyContent={"center"}
+          flexDirection={"column"}
         >
           <Testimonial>
             <TestimonialContent>
@@ -106,7 +110,9 @@ export default function WithSpeechBubbles() {
               title={"Front-end Developer Jr"}
             />
           </Testimonial>
-          {/* <Image src={imgGif} alt="landing" w={"50%"}  /> */}
+          <Box>
+            <Image src={logoinicial} margin={"auto"} />
+          </Box>
         </Stack>
       </Container>
     </Box>

@@ -70,7 +70,7 @@ export default function WithSubnavigation() {
               <ListItem
                 onClick={() => handleNavigation("/home")}
                 cursor={"pointer"}
-                _hover={{ color: "green.600" }}
+                _hover={{ color: "#e3386a" }}
                 marginLeft={"10px"}
               >
                 Home
@@ -79,7 +79,7 @@ export default function WithSubnavigation() {
                 onClick={() => handleNavigation("/tecnologias")}
                 cursor={"pointer"}
                 marginLeft={"20px"}
-                _hover={{ color: "green.600" }}
+                _hover={{ color: "#e3386a" }}
               >
                 Tecnologias
               </ListItem>
@@ -87,7 +87,7 @@ export default function WithSubnavigation() {
                 onClick={() => handleNavigation("/projetos")}
                 cursor={"pointer"}
                 marginLeft={"20px"}
-                _hover={{ color: "green.600" }}
+                _hover={{ color: "#e3386a" }}
               >
                 Projetos
               </ListItem>
@@ -95,7 +95,7 @@ export default function WithSubnavigation() {
                 onClick={() => handleNavigation("/contato")}
                 cursor={"pointer"}
                 marginLeft={"20px"}
-                _hover={{ color: "green.600" }}
+                _hover={{ color: "#e3386a" }}
               >
                 Contato
               </ListItem>
@@ -130,7 +130,7 @@ export default function WithSubnavigation() {
               onClick={() => handleNavigation("/home")}
               marginTop={"0px"}
               cursor={"pointer"}
-              _hover={{ color: "green.600" }}
+              _hover={{ color: "#e3386a" }}
             >
               Home
             </ListItem>
@@ -138,7 +138,7 @@ export default function WithSubnavigation() {
               onClick={() => handleNavigation("/tecnologias")}
               marginTop={"10px"}
               cursor={"pointer"}
-              _hover={{ color: "green.600" }}
+              _hover={{ color: "#e3386a" }}
             >
               Tecnologias
             </ListItem>
@@ -146,7 +146,7 @@ export default function WithSubnavigation() {
               onClick={() => handleNavigation("/projetos")}
               marginTop={"10px"}
               cursor={"pointer"}
-              _hover={{ color: "green.600" }}
+              _hover={{ color: "#e3386a" }}
             >
               Projetos
             </ListItem>
@@ -154,7 +154,7 @@ export default function WithSubnavigation() {
               onClick={() => handleNavigation("/contato")}
               marginTop={"10px"}
               cursor={"pointer"}
-              _hover={{ color: "green.600" }}
+              _hover={{ color: "#e3386a" }}
             >
               Contato
             </ListItem>
