@@ -50,7 +50,7 @@ const Contato = () => {
                 isExternal
                 target={"_blank"}
               >
-                <SiLinkedin size={"5em"} color={"#0e76a8"} />
+                <SiLinkedin size={"3em"} color={"#0e76a8"} />
               </Link>
 
               <Heading
@@ -76,7 +76,7 @@ const Contato = () => {
                 isExternal
                 target={"_blank"}
               >
-                <SiGmail size={"5em"} color={"#f14336"} />
+                <SiGmail size={"3em"} color={"#f14336"} />
               </Link>
 
               <Heading
@@ -102,7 +102,7 @@ const Contato = () => {
                 isExternal
                 target={"_blank"}
               >
-                <SiInstagram size={"5em"} color={"#db316d"} />
+                <SiInstagram size={"3em"} color={"#db316d"} />
               </Link>
 
               <Heading
