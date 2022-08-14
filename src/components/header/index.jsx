@@ -113,14 +113,19 @@ export default function WithSubnavigation() {
         </Stack>
       </Flex>
 
-      <Collapse in={isOpen} animateOpacity>
-        <Flex>
+      <Collapse
+        in={isOpen}
+        animateOpacity
+        style={{
+          zIndex: 1,
+        }}
+      >
+        <Flex bg={useColorModeValue("white", "gray.800")}>
           <UnorderedList
-            position={"absolute"}
+            //position={"absolute"}
             padding={0}
             margin={0}
             top={61}
-            //left={-5}
             bg={useColorModeValue("white", "gray.800")}
             p={5}
             display={{ md: "none" }}
@@ -155,6 +160,7 @@ export default function WithSubnavigation() {
               marginTop={"10px"}
               cursor={"pointer"}
               _hover={{ color: "#e3386a" }}
+              zIndex={1}
             >
               Contato
             </ListItem>
