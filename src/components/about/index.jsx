@@ -81,7 +81,7 @@ export default function WithSpeechBubbles() {
         <Stack
           spacing={0}
           align={"center"}
-          //marginTop={"60px"}
+          marginTop={"60px"}
           overflowY={"none"}
         >
           <Heading zIndex={"1"}>Sobre mim</Heading>
