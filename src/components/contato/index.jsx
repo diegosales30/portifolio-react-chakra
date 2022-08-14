@@ -6,7 +6,7 @@ import {
   Link,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { SiInstagram, SiLinkedin, SiGmail } from "react-icons/si";
+import { SiInstagram, SiLinkedin, SiGmail, SiWhatsapp } from "react-icons/si";
 import contatoImg from "../../assets/contato.png";
 
 const Contato = () => {
@@ -128,11 +128,11 @@ const Contato = () => {
               }}
             >
               <Link
-                href="https://www.linkedin.com/in/diego-felipe-js/"
+                href="https://wa.me/5592994748629"
                 isExternal
                 target={"_blank"}
               >
-                <SiLinkedin size={"3em"} color={"#0e76a8"} />
+                <SiWhatsapp size={"3em"} color={"#34af23"} />
               </Link>
 
               <Heading
@@ -141,7 +141,7 @@ const Contato = () => {
                 textAlign={"center"}
                 marginTop={"20px"}
               >
-                Linkedin
+                Whatsapp
               </Heading>
             </Box>
           </Flex>
