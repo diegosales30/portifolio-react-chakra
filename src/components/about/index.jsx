@@ -53,6 +53,7 @@ const TestimonialText = ({ children }) => {
       textAlign={"center"}
       color={useColorModeValue("gray.600", "gray.400")}
       fontSize={"sm"}
+      padding={"15px"}
     >
       {children}
     </Text>
@@ -75,7 +76,7 @@ const TestimonialAvatar = ({ src, name, title }) => {
 
 export default function WithSpeechBubbles() {
   return (
-    <Box bg={useColorModeValue("gray.100", "gray.700")} h={"100vh"}>
+    <Box bg={useColorModeValue("gray.100", "gray.700")} height={"100%"}>
       <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
         <Stack
           spacing={0}

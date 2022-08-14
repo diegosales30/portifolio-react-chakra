@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: border-box
+    
   }
   :root{
     --primary: #111111;
@@ -16,9 +17,11 @@ export const GlobalStyle = createGlobalStyle`
     --senary: #ffffff;
     
   }
+  
   body{
     font-family: 'Inter', sans-serif;
     background-color: var(--quaternary);
+    
     
     
     

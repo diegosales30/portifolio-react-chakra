@@ -7,13 +7,15 @@ import Technology from "../pages/technology";
 
 const Routers = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Landing />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/tecnologias" element={<Technology />} />
-      <Route path="/projetos" element={<Project />} />
-      <Route path="/contato" element={<Contact />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/tecnologias" element={<Technology />} />
+        <Route path="/projetos" element={<Project />} />
+        <Route path="/contato" element={<Contact />} />
+      </Routes>
+    </>
   );
 };
 export default Routers;

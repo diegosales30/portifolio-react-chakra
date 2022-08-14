@@ -11,7 +11,7 @@ import contatoImg from "../../assets/contato.png";
 
 const Contato = () => {
   return (
-    <Box bg={useColorModeValue("gray.100", "gray.700")} h={"100vh"}>
+    <Box bg={useColorModeValue("gray.100", "gray.700")}>
       <Heading
         as="h1"
         size="lg"
@@ -21,12 +21,12 @@ const Contato = () => {
       >
         Fale comigo
       </Heading>
-      <Box paddingTop={"30px"} paddingBottom={"30px"} margin={"auto"}>
+      <Box margin={"auto"}>
         <Box margin={"auto"} maxW={"1058px"}>
           <Flex
             margin={"auto"}
             w={"60%"}
-            h={"100%"}
+            //h={"100%"}
             display={{
               base: "flex",
               md: "flex",
@@ -38,6 +38,7 @@ const Contato = () => {
           >
             <Box
               w={"200px"}
+              h={"200px"}
               display={"flex"}
               flexDirection={"column"}
               alignItems={"center"}
@@ -64,6 +65,7 @@ const Contato = () => {
             </Box>
             <Box
               w={"200px"}
+              h={"200px"}
               display={"flex"}
               flexDirection={"column"}
               alignItems={"center"}
@@ -90,6 +92,7 @@ const Contato = () => {
             </Box>
             <Box
               w={"200px"}
+              h={"200px"}
               display={"flex"}
               flexDirection={"column"}
               alignItems={"center"}
@@ -114,10 +117,42 @@ const Contato = () => {
                 Instagram
               </Heading>
             </Box>
+            <Box
+              w={"200px"}
+              h={"200px"}
+              display={"flex"}
+              flexDirection={"column"}
+              alignItems={"center"}
+              _hover={{
+                cursor: "pointer",
+              }}
+            >
+              <Link
+                href="https://www.linkedin.com/in/diego-felipe-js/"
+                isExternal
+                target={"_blank"}
+              >
+                <SiLinkedin size={"3em"} color={"#0e76a8"} />
+              </Link>
+
+              <Heading
+                as="h4"
+                size="sd"
+                textAlign={"center"}
+                marginTop={"20px"}
+              >
+                Linkedin
+              </Heading>
+            </Box>
           </Flex>
         </Box>
       </Box>
-      <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
+      <Box
+        padding={0}
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+      >
         <Image src={contatoImg} alt="logoimg" />
       </Box>
     </Box>
