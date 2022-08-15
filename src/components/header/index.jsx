@@ -59,6 +59,7 @@ export default function WithSubnavigation() {
             size={30}
             cursor={"pointer"}
             onClick={() => handleNavigation("/home")}
+            bg={"transparent"}
           />
           <Flex>
             <UnorderedList
