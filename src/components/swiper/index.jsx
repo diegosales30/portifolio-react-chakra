@@ -19,8 +19,9 @@ import easymovie from "../../assets/image/easymovie.png";
 import nukenzie from "../../assets/image/nukenzie.png";
 import tiao from "../../assets/image/tic.png";
 import breve from "../../assets/image/bv.png";
+import orgneasy from "../../assets/image/organizze.png";
 
-const DATA = [doit, easymovie, nukenzie, tiao, breve];
+const DATA = [doit, easymovie, nukenzie, tiao, orgneasy, breve];
 
 const SwiperComponent = () => {
   return (
